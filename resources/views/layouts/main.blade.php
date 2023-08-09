@@ -64,6 +64,7 @@
     <div class="body-wrapper">
         <!--  Header Start -->
         <header class="app-header">
+
             <nav class="navbar navbar-expand-lg navbar-light">
                 <ul class="navbar-nav">
                     <li class="nav-item d-block d-xl-none">
@@ -74,6 +75,9 @@
                 </ul>
                 <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
                     <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+                        <a type="button" class="d-none d-sm-block btn btn-primary {{$title != "Link"? "d-none": ""}}" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Add Items
+                        </a>
                         <li class="nav-item dropdown">
                             <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"
                                data-bs-toggle="dropdown"
@@ -97,6 +101,7 @@
                 </div>
             </nav>
         </header>
+
         <!--  Header End -->
         <div class="container-fluid">
             @yield('container')

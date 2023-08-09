@@ -1,6 +1,23 @@
 @extends('layouts.main')
 @section('container')
+    <style>
+        .floating-button {
+            position: fixed;
+            bottom: 50px;
+            right: 30px;
+            z-index: 1000;
+        }
 
+        .btn-floating {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+    </style>
     <div class="container-md">
         <div class="card">
             <div class="card-body">
@@ -28,7 +45,28 @@
         </div>
     </div>
 
-
+    <div class="floating-button rounded">
+        <button class="btn btn-primary btn-floating" id="add-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <i class="ti ti-plus fs-6"></i>
+        </button>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         function copyToClipboard(text) {
             const textarea = document.createElement('textarea');
