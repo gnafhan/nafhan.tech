@@ -14,8 +14,8 @@
                                     <div style="bottom: 18px; position: absolute">
                                         <a  target="_blank" href="{{$l["url"]}}"
                                             class="btn btn-primary me-1">Go Link</a>
-                                        <a target="_blank" href="{{$l["url"]}}"
-                                           class="btn btn-outline-primary">Copy Link</a>
+                                        <button onclick="copyToClipboard('{{$l["url"]}}')"
+                                           class="btn btn-outline-primary">Copy Link</button>
                                     </div>
 
                                 </div>
@@ -27,5 +27,18 @@
             </div>
         </div>
     </div>
+
+
+    <script>
+        function copyToClipboard(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert('Tautan telah disalin ke clipboard.');
+        }
+    </script>
 
 @endsection

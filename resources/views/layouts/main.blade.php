@@ -52,7 +52,7 @@
                             <span class="hide-menu">Link</span>
                         </a>
                     </li>
-                    
+
                 </ul>
             </nav>
             <!-- End Sidebar navigation -->
