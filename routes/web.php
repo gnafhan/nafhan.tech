@@ -7,3 +7,4 @@ use App\Http\Controllers\LinkController;
 Route::get("/", [HomeController::class, "index"]);
 Route::get("/tools/link", [LinkController::class, "index"]);
 Route::post("/tools/link", [LinkController::class, "create"]);
+Route::delete("/tools/link", [LinkController::class, "delete"]);

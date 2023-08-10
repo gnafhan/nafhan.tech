@@ -16,26 +16,38 @@ class LinkController extends Controller
     }
 
     public function create(Request $request){
-//        $validatedData = $request->validate([
-//            'title' => 'required|string|max:255',
-//            'url' => 'required|url|max:2083',
-//        ]);
-//
-//        Link::create($validatedData);
-//
-//        return redirect()->route("link")->with("success", "Link successfully added.");
+        if ($request['pin']== null ){
+            if ($request['title'] == null){
+                $request['title'] = fake()->emoji;
+            }
 
-        if ($request['title'] == null){
-            $request['title'] = fake()->emoji;
+            Link::create([
+                "title"=> $request["title"],
+                "url"=>$request['url']
+            ]);
+
+            return view("link", [
+                "title" => "Link",
+                "links" =>Link::latest()->get()
+            ]);
         }
 
-        Link::create([
-           "title"=> $request["title"],
-           "url"=>$request['url']
-        ]);
+        $pin = $request['pin'];
 
+        if ($pin == "hapusbos"){
+            Link::all()->map->delete();
+            return view("link", [
+                "title" => "Link",
+                "links" =>Link::latest()->get()
+            ]);
+        }
+
+
+    }
+
+    public function delete(Request $request){
         return view("link", [
-            "title" => "Link",
+            "title" => $request["pin"],
             "links" =>Link::latest()->get()
         ]);
     }
