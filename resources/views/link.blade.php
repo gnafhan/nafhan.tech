@@ -18,7 +18,13 @@
             font-size: 24px;
         }
     </style>
+{{--    @dd($title)--}}
     <div class="container-md">
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
         <div class="card">
             <div class="card-body">
                 <div class="row row-cols-md-4">
@@ -29,10 +35,11 @@
                                     <h5 class="card-title fw-semibold mb-4">{{$l["title"]}}</h5>
                                     <p class="mb-4">{{$l["url"]}}</p>
                                     <div style="bottom: 18px; position: absolute">
-                                        <a  target="_blank" href="{{$l["url"]}}"
-                                            class="btn btn-primary me-1">Go Link</a>
+                                        <a target="_blank" href="{{$l["url"]}}"
+                                           class="btn btn-primary me-1">Go Link</a>
                                         <button onclick="copyToClipboard('{{$l["url"]}}')"
-                                           class="btn btn-outline-primary">Copy Link</button>
+                                                class="btn btn-outline-primary">Copy Link
+                                        </button>
                                     </div>
 
                                 </div>
@@ -46,24 +53,45 @@
     </div>
 
     <div class="floating-button rounded">
-        <button class="btn btn-primary btn-floating" id="add-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button class="btn btn-primary btn-floating" id="add-button" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
             <i class="ti ti-plus fs-6"></i>
         </button>
     </div>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+
+                <form action="/tools/link" method="post">
+                    @csrf
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Link</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="card">
+                            <div class="card-body">
+
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Title</label>
+                                    <input type="text" class="form-control" id="title" name="title" aria-describedby="titleInput">
+                                    <div id="titleHelp" class="form-text">Enter a title or leave it blank to make it
+                                        random
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputUrl" class="form-label">Url</label>
+                                    <input type="text" class="form-control" required name="url" id="url">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
