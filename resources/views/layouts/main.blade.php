@@ -53,6 +53,19 @@
                         </a>
                     </li>
 
+                    <li class="nav-small-cap">
+                        <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                        <span class="hide-menu">Tasks</span>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="/tools/link" aria-expanded="false">
+                <span>
+                  <i class="ti ti-article"></i>
+                </span>
+                            <span class="hide-menu">Task 1</span>
+                        </a>
+                    </li>
+
                 </ul>
             </nav>
             <!-- End Sidebar navigation -->
@@ -75,7 +88,8 @@
                 </ul>
                 <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
                     <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-                        <a type="button" class="d-none d-sm-block btn btn-primary {{$title != "Link"? "d-none": ""}}" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <a type="button" class=" btn btn-primary {{$title != "Link"? "d-none": ""}}"
+                           data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Add Items
                         </a>
                         <li class="nav-item dropdown">
