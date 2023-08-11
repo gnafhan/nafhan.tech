@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nafhan Tech | {{$title}}</title>
-    <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.png" />
-    <link rel="stylesheet" href="../assets/css/styles.min.css" />
+    <link rel="shortcut icon" type="image/png" href="/assets/images/logos/favicon.png" />
+    <link rel="stylesheet" href="/assets/css/styles.min.css" />
 </head>
 
 <body>
@@ -21,7 +21,7 @@
                     <div class="card mb-0">
                         <div class="card-body">
                             <a href="/" class="text-nowrap logo-img text-center d-block py-3 w-100">
-                                <img src="../assets/images/logos/logo.svg" width="180" alt="">
+                                <img src="/assets/images/logos/logo.svg" width="180" alt="">
                             </a>
                             <p class="text-center">Register your account</p>
                             <form method="post" action="/register">
@@ -75,8 +75,8 @@
         </div>
     </div>
 </div>
-<script src="../assets/libs/jquery/dist/jquery.min.js"></script>
-<script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

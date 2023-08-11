@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -23,7 +24,7 @@ class UserController extends Controller
             'username'=> "required|string|unique:users|max:100|min:3",
             'password'=> "required|max:255|min:6",
         ]);
-        $validated['password'] = bcrypt($validated['password']);
+        $validated['password'] = Hash::make($validated['password']);
 
         User::create($validated);
         return redirect('/')->with('success', 'Account created successfully');
