@@ -58,9 +58,9 @@
                         <span class="hide-menu">Tasks</span>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="/tools/link" aria-expanded="false">
+                        <a class="sidebar-link" href="/task/task1" aria-expanded="false">
                 <span>
-                  <i class="ti ti-article"></i>
+                  <i class="ti ti-file-description"></i>
                 </span>
                             <span class="hide-menu">Task 1</span>
                         </a>
