@@ -15,5 +15,7 @@ Route::delete("/tools/link", [LinkController::class, "delete"]);
 Route::get("/task/task1", [Task1Controller::class, "index"]);
 
 Route::get("/register", [UserController::class, "index"]);
+Route::post("/register", [UserController::class, "store"]);
+
 
 
