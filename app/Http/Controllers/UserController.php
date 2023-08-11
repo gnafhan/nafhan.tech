@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -16,7 +17,6 @@ class UserController extends Controller
     }
 
     public function store(Request $request){
-//        dd($request);
 
         $validated= $request->validate([
             'name' => "required|string|max:255",
@@ -28,5 +28,15 @@ class UserController extends Controller
 
         User::create($validated);
         return redirect('/')->with('success', 'Account created successfully');
+    }
+
+    public function logout (Request $request){
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect("/");
     }
 }
