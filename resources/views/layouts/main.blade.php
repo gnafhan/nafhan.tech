@@ -116,12 +116,12 @@
                                 </div>
                             </li>
                         @else
-                            <a type="button" class="btn btn-primary me-3"
-                               data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <a href="/login" class="btn btn-primary me-3"
+                               >
                                 Log In
                             </a>
-                            <a type="button" class="btn btn-outline-primary"
-                               data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <a href="/register"  class="btn btn-outline-primary"
+                               >
                                 Register
                             </a>
                         @endauth
