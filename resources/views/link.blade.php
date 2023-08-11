@@ -59,12 +59,14 @@
             <i class="ti ti-plus fs-6"></i>
         </button>
     </div>
-    <div class="floating-buttond rounded">
-        <button class="btn btn-danger btn-floating" id="add-button" data-bs-toggle="modal"
-                data-bs-target="#deleteModal">
-            <i class="ti ti-trash fs-6"></i>
-        </button>
-    </div>
+    @auth
+        <div class="floating-buttond rounded">
+            <button class="btn btn-danger btn-floating" id="add-button" data-bs-toggle="modal"
+                    data-bs-target="#deleteModal">
+                <i class="ti ti-trash fs-6"></i>
+            </button>
+        </div>
+    @endauth
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -106,17 +108,17 @@
                 <form action="/tools/link" method="post">
                     @csrf
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Masukkan pin</h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Validation</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="card">
                             <div class="card-body">
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Pin</label>
+                                    <label for="exampleInputEmail1" class="form-label">Delete</label>
                                     <input type="text" class="form-control" id="pin" name="pin" aria-describedby="titleInput">
                                     <div id="titleHelp" class="form-text">
-                                        Enter pin to delete
+                                        Type "yes" to delete all
                                     </div>
                                 </div>
                             </div>

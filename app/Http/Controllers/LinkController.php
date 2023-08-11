@@ -34,7 +34,7 @@ class LinkController extends Controller
 
         $pin = $request['pin'];
 
-        if ($pin == "hapusbos"){
+        if ($pin == "yes"){
             Link::all()->map->delete();
             return view("link", [
                 "title" => "Link",
