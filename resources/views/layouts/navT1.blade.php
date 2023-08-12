@@ -7,7 +7,7 @@
             /*overflow: hidden;*/
         }
 
-        .card{
+        .cardI{
             backdrop-filter: blur(1rem);
             min-height: 80vh;
 
@@ -20,7 +20,7 @@
          }
     </style>
 
-    <div class="card cb-1 mt-3">
+    <div class="cardI cb-1 mt-3">
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent mb-3 mx-3 mt-3 ">
             <div class="container-fluid">
                 <a class="navbar-brand fw-semibold cursor-pointer" href="#">Why JS</a>
@@ -30,19 +30,19 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNavs">
                     <ul class="navbar-nav justify-content-center">
                         <li class="nav-item ">
-                            <a class="nav-link active border-bottom-1 border-1 border-dark" aria-current="page" href="#">Home</a>
+                            <a class="nav-link {{$title == "Task 1"? "active text-primary": ""}} border-bottom-1 border-1 border-dark" aria-current="page" href="/task/task1">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Reason</a>
+                            <a class="nav-link {{$title == "Reason"? "active text-primary": ""}}" href="/task/task1/reason">Reason</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Benefit</a>
+                            <a class="nav-link {{$title == "Popularity"? "active text-primary": ""}}" href="/task/task1/popularity">Popularity</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Learn</a>
+                            <a class="nav-link {{$title == "Learn"? "active text-primary": ""}}" href="/task/task1/learn">Learn</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Author</a>
+                            <a class="nav-link {{$title == "Author"? "active text-primary": ""}}" href="/task/task1/author">Author</a>
                         </li>
                     </ul>
                 </div>

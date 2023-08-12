@@ -15,6 +15,13 @@ Route::post("/tools/link", [LinkController::class, "create"]);
 Route::delete("/tools/link", [LinkController::class, "delete"]);
 
 Route::get("/task/task1", [Task1Controller::class, "index"]);
+Route::get("/task/task1/reason", [Task1Controller::class, "reason"]);
+Route::get("/task/task1/popularity", [Task1Controller::class, "popularity"]);
+Route::get("/task/task1/learn", [Task1Controller::class, "learn"]);
+Route::get("/task/task1/author", [Task1Controller::class, "author"]);
+
+
+
 
 Route::get("/register", [UserController::class, "index"])->middleware('guest');
 Route::post("/register", [UserController::class, "store"])->middleware('guest');
