@@ -88,10 +88,18 @@
                 </ul>
                 <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
                     <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-                        <a type="button" class=" btn btn-primary me-3 {{$title != "Link"? "d-none": ""}}"
-                           data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            Add Items
-                        </a>
+                        @auth()
+                            <a type="button" class="btn {{$title != "Link"? "d-none": ""}} btn-primary me-3"
+                               data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Add Items
+                            </a>
+                        @else
+                            <a type="button" class="btn d-none btn-primary me-3"
+                               data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Add Items
+                            </a>
+                        @endauth
+
                         @auth
                             <li class="nav-item dropdown">
                                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"

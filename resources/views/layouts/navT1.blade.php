@@ -23,7 +23,7 @@
     <div class="cardI cb-1 mt-3">
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent mb-3 mx-3 mt-3 ">
             <div class="container-fluid">
-                <a class="navbar-brand fw-semibold cursor-pointer" href="#">Why JS</a>
+                <a class="navbar-brand fw-semibold cursor-pointer" href="/task/task1/">Why JS</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavs" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>

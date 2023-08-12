@@ -26,7 +26,7 @@
                         <img src="/assets/images/products/task.svg" width="200px" class="card-img mb-4"/>
                         <h5 class="card-title fw-semibold mb-4">Installing Laravel</h5>
                         <p class="mb-4">Make 4 routes</p>
-                        <a href="/tools/link" class=" btn btn-primary">Go Task</a>
+                        <a href="/task/task1/" class=" btn btn-primary">Go Task</a>
                     </div>
                 </div>
             </div>

@@ -14,8 +14,8 @@
 
             </div>
             <div class="buttons ms-lg-5 mt-lg-3">
-                <a href="" class="btn btn-lg btn-primary me-3 rounded-5">Start Learning</a>
-                <a href="" class="btn btn-lg btn-outline-primary rounded-5">Why JS</a>
+                <a href="/task/task1/learn" class="btn btn-lg btn-primary me-3 rounded-5">Start Learning</a>
+                <a href="/task/task1/reason" class="btn btn-lg btn-outline-primary rounded-5">Why JS</a>
             </div>
         </div>
         <div class="col-md-6 align-content-center justify-content-center align-items-center ">
